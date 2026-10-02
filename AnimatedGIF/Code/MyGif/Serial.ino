@@ -58,18 +58,18 @@ void scan_connect_reset()
     
     else if(command.indexOf(",") >= 0)
     {
-      WC.ssid_i = input.substring(0,input.indexOf(','));
-      WC.password_i =   input.substring(input.indexOf(',')+1);
+      WC.ssid_str = input.substring(0,input.indexOf(','));
+      WC.password_str =   input.substring(input.indexOf(',')+1);
   
-      Write_String_EEPROM(EEPROM_SSID_ADDRESS, WC.ssid_i);
-      Write_String_EEPROM(EEPROM_PASSWORD_ADDRESS, WC.password_i);
+      Write_String_EEPROM(EEPROM_SSID_ADDRESS, WC.ssid_str);
+      Write_String_EEPROM(EEPROM_PASSWORD_ADDRESS, WC.password_str);
   
       Serial.println();
       Serial.print("new ssid: ");
-      Serial.print(WC.ssid_i);
+      Serial.print(WC.ssid_str);
       Serial.print(" , ");
       Serial.print("new password: ");
-      Serial.print(WC.password_i);
+      Serial.print(WC.password_str);
       Serial.println();
            
       delay(5); 

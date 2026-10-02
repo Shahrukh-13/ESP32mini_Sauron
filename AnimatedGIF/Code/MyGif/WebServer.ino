@@ -18,7 +18,7 @@ void Update_WebPage()
 
   // Heading: print connected network SSID
   WS.html+= "<h2>";
-  WS.html+= "Connected to SSID: " + WC.ssid_i;
+  WS.html+= "Connected to SSID: " + WC.ssid_str;
   WS.html+= "<br><br>"; //new line in heading
   WS.html+= "</h2>";
 

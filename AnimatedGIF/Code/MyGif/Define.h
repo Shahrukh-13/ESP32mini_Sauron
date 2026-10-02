@@ -30,8 +30,8 @@ struct wifi_config
   uint8_t wifi_connection_timeout_count;
   uint8_t PowerCycle_Count;
   bool wifi_flag;
-  String ssid_i;
-  String password_i; 
+  String ssid_str;
+  String password_str; 
   char ssid[50];
   char password[50];
 };

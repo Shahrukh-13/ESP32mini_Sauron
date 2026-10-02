@@ -4,14 +4,14 @@ void WiFi_Init()
 {
   WC.wifi_connection_timeout_count = 0;
   
-  WC.ssid_i = Read_String_EEPROM(EEPROM_SSID_ADDRESS);
-  WC.password_i = Read_String_EEPROM(EEPROM_PASSWORD_ADDRESS);
+  WC.ssid_str = Read_String_EEPROM(EEPROM_SSID_ADDRESS);
+  WC.password_str = Read_String_EEPROM(EEPROM_PASSWORD_ADDRESS);
 
-  WS.Saved_WiFi_SSID = WC.ssid_i;
-  WS.Saved_WiFi_Password = WC.password_i;
+  WS.Saved_WiFi_SSID = WC.ssid_str;
+  WS.Saved_WiFi_Password = WC.password_str;
   
-  WC.ssid_i.toCharArray(WC.ssid, WC.ssid_i.length()+1);
-  WC.password_i.toCharArray(WC.password, WC.password_i.length()+1);
+  WC.ssid_str.toCharArray(WC.ssid, WC.ssid_str.length()+1);
+  WC.password_str.toCharArray(WC.password, WC.password_str.length()+1);
     
   //connect to WiFi
   Serial.printf("Connecting to %s ", WC.ssid);
